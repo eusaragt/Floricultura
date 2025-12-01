@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florescer Boutique Floral</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        /* Reset básico */
+        *{ 
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Momo Trust Display", sans-serif;
+            font-weight: 400;
+            background-color: #f2f2f2;
+            color: #333;
+            text-decoration: none;
+        
+        }
+        header {
+            background-color: #0B3D2E;
+            color: aliceblue;
+            text-align: center;
+            padding: 40px 20px;
+        }   
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            border: 3px solid white;
+        }
+        nav {
+            background-color: #D4AF37;
+            text-align: center;
+            padding: 10px 0;
+        }       
+        nav a {
+            color: aliceblue;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #f2f2f2;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #1C4E3E;
+
+        }
+        section{
+            margin-bottom: 30px;
+        }
+        h2{
+            color: #1C4E3E;
+            border-bottom: 2px solid wheat;
+            padding-bottom: 20px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+
+        }
+        .social a{
+            color: #E6D7B9;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        footer{
+            background-color: #1C4E3E;
+            color: aliceblue;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .social-media a{
+            color: #D4AF37;
+            margin-right: 15px;
+            font-size: 28px;
+            text-decoration: none;
+        }
+        .conteudo1 img {
+            width: 200px;
+            float: right;
+            margin-left: 10px;
+
+        }
+        #btnMotivacao{
+            padding:10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Florescer Boutique Floral</h1>
+        <img src="img/ChatGPT Image 14_11_2025, 20_59_11.png">
+        <div>
+            <button id="btnFlores">
+                Qual flor combina com seu dia?
+            </button>
+            <h3 id="mensagem"></h3>
+        </div>
+    </header>
+    <nav>
+        <a href="#Boas Vindas">Boas Vindas</a>
+        <a href="#Sobre Nós">Sobre Nós</a>
+        <a href="#Serviços">Serviços</a>
+        <a href="#Contato">Contato</a>
+    </nav><hr>
+    <main> 
+        <div class="conteudo1">
+            <img src="img/ChatGPT Image 14_11_2025, 21_17_52.png" alt="">
+            <section id="Boas Vindas">
+                <h2>Bem-vindos à Florescer Boutique Floral</h2>
+                <p> Na Florescer, acreditamos que cada flor carrega uma história. Trabalhamos com dedicação para transformar emoções em arranjos únicos, feitos com frescor, delicadeza e um olhar especial para cada detalhe. Aqui, cada pétala floresce para encantar seu momento.</p>
+                <hr>
+            </section>
+            
+            <section id="Sobre Nós">
+                <h2>Sobre Nós</h2>
+                <p> A Florescer Boutique Floral nasceu do amor pela arte floral e da vontade de tornar o mundo mais bonito, um arranjo por vez. Nossa equipe é apaixonada pelo que faz e busca sempre harmonizar cores, texturas e estilos para criar composições que emocionam. Atuamos com compromisso, criatividade e carinho, oferecendo produtos artesanais pensados especialmente para você.</p>
+                <hr>
+            </section>
+        </div>  
+
+        <section id="Serviços">
+        <h2>Serviços</h2>
+        <p> Oferecemos arranjos personalizados, buquês para presentes, decorações florais para eventos, além de assinaturas semanais e mensais. Cada criação é feita sob medida, respeitando seu gosto, ocasião e propósito. Nossa missão é entregar beleza, frescor e qualidade em cada entrega.</p>
+        <hr>
+        </section>
+
+        <section id="Contato">
+            <h2>Contato</h2>
+            <p> Estamos aqui para ajudar você a transformar sua ideia em um arranjo inesquecível.
+Entre em contato para pedidos, orçamentos ou dúvidas:</p>
+        <p><strong>Email:</strong>contato@florescer.com</p>
+        <p><strong>Telefone:</strong>(11) 12345-6789</p>
+        <p> Atendimento de segunda a sábado, das 9h às 18h.</p>
+
+        <div class="social-media">
+            <a href="#" target="_blank" title="Linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        
+        </section >
+        <form action="/enviar" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        
+
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Florescer Boutique Floral. </p>
+    </footer>
+
+    <script>
+        let frases = [
+            'Lírios!',
+            'Orquídeas!',
+            'Rosas!',
+            'Girassóis!',
+            'Margaridas!',
+            'Tulipas!',
+            'Copo de leite!',
+            'Suculentas!',
+            'Astromélias!',
+            'Gérberas!',
+            'Dália!',
+            'Gazânia!',
+            'Flor de cerejeira!',
+            'Ave do paraíso!',
+            'Coração sangrento!'
+            
+        ];
+        document.getElementById('btnFlores').onclick = function() {   
+            let i = Math.floor(
+                        Math.random() * frases.length
+                    );
+            document.getElementById('mensagem').innerHTML = frases[i];
+        };
+
+    </script>
+    
+</body>
+</html>  
